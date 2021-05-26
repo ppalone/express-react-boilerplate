@@ -7,7 +7,7 @@
     "dev-server": "NODE_ENV=production node index.js",
     "dev-client": "npm run start --prefix app",
     "dev": "concurrently -n server,client \"npm run dev-server\" \"npm run dev-client\"",
-    "heroku-postbuild": "npm run build --prefix app"
+    "heroku-postbuild": "npm install --prefix app && npm run build --prefix app"
   },
   "keywords": [
     "express",
